@@ -1,0 +1,107 @@
+﻿  /*photo uoloader*/.pub-photo
+        {
+            position: relative;
+            border: 0px;
+            height: 190px;
+        }
+        .pub-photo-map
+        {
+            width: 188px;
+            height: 211px;
+            background: url(/images/bg_pmap.gif) no-repeat;
+        }
+        .pub-photo-split
+        {
+            width: 6px;
+        }
+        .pub-photo-uploader
+        {
+            width: 702px;
+            background: url(/images/bg_pmap.gif) -194px 0 no-repeat;
+        }
+        .pub-photo-uploader ul
+        {
+            margin-left: 2px;
+            _margin-top: 16px;
+        }
+        .pub-photo-uploader li
+        {
+            width: 135px;
+            float: left;
+            text-align: center;
+            height: 160px;
+            margin-left: 12px;
+            display: inline;
+        }
+        .pub-photo-uploader li .img
+        {
+            border: 1px solid #e7ca96;
+            width: 135px;
+            height: 135px;
+            background: #f4f2f2;
+            margin-top: 10px;
+            cursor: move;
+            overflow: hidden;
+            font-size: 12px;
+            color: #999;
+        }
+        .pub-photo-uploader li .img img
+        {
+            vertical-align: middle;
+        }
+        .pub-photo-uploader li .blank
+        {
+            width: 0;
+            height: 135px;
+        }
+        .pub-photo-uploader li .img strong
+        {
+            margin-top: 45px;
+            display: block;
+        }
+        .pub-photo-uploader li .action
+        {
+            margin-top: 10px;
+        }
+        .pub-photo-uploader li .action span
+        {
+            float: right;
+            margin-top: 5px;
+            color: #00f;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .pub-photo-uploader li .action button
+        {
+            float: left;
+            margin-left: 5px;
+        }
+        .pub-submit
+        {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .pub-submit button.preview
+        {
+            width: 68px;
+            height: 42px;
+            background: url(/images/btn_pub_preview.gif) no-repeat;
+            border: 0;
+            text-indent: -9999px;
+            float: left;
+            margin: 0 18px 0 315px;
+        }
+        .submit
+        {
+            width: 172px;
+            height: 42px;
+            background: url(/images/btn_pub_submit.gif) no-repeat;
+            border: 0;
+            text-indent: -9999px;
+            float: left;
+        }
+        .img
+        {
+            text-align: center;
+            padding-top: 3px;
+        }

@@ -1,0 +1,72 @@
+﻿input{font-size:12px;}
+
+#mesWindow{border:3px solid #b3d8ea;padding:0px;}
+#orderEdit_panel{font-size:12px;margin:3px;}
+#orderEdit_panel a{color:#000;}
+#orderEdit_panel h3{font-size:14px;color:#05539b;padding-left:20px;margin-top:0px;border-bottom:1px solid #b3d8ea;height:26px;line-height:26px; text-align:left;margin-bottom:5px;cursor:move}
+#orderEdit_panel h1{font-size:13px; background:#f1f9fc; border:#b3d8ea dotted 1px;margin:2px;padding:3px;color:#05539b;font-weight:normal}
+#orderEdit #orderEdit_addr{}
+#orderEdit_addr td{height:23px;padding-bottom:1px;}
+
+#orderEdit_panel .btnPanel{text-align:center;padding:6px 5px 6px 0;}
+#orderEdit_panel .txt{border:1px solid #7f9db9;height:16px;padding:1px;margin-left:2px;}
+#orderEdit_panel .btn{padding:2px 4px 0 4px;}
+
+#submitWaitInfo{text-align:right;padding-top:2px;}
+.alertInfo{background:#FFECEC; border:#F34956 solid 1px; color:#C00;margin-left:3px;margin-bottom:3px;padding:2px;padding-bottom:0px;line-height:12px;}
+.waitInfo{color:#666;Background:#fff url(../images/loading.gif) no-repeat 3px 3px;border:#C0C0C0 1px solid; margin-left:10px;padding-top:2px;padding-bottom:3px;padding-left:20px;padding-right:10px;font-size:12px;font-weight:400;}
+.couponSelect{background:#F34956;color:#fff}
+	.coupon_part{border:#eee 1px solid;padding:2px;margin:2px;}
+.coupon_part ul,.coupon_part li .coupon_part div{margin:0px; padding:0px; list-style:none}
+
+/*box*/
+.groupBox{border:1px solid #b3d8ea;background:#f1f9fc;padding:0 10px 12px;margin-top:9px;}
+#mesWindow .groupBox{border:3px solid #b3d8ea;}
+.groupBox .groupTable{background:#ffffff;border:#CCCCCC 1px solid;margin-bottom:4px;}
+
+/*---------------订单信息-------------------*/
+.o_write{border:#cccccc solid 1px; text-align:left;background:#fff;padding:3px;margin-bottom:4px;}
+
+.o_write h1{line-height:120%; font-size:13px; background:#f1f9fc; border:#b3d8ea dotted 1px;margin:2px;padding:3px;color:#05539b;font-weight:normal}
+
+.o_write td{line-height:20px; padding:2px}
+
+.o_write td a{color:#666}
+.o_write td a:hover{color:#f60}
+
+
+#ware_info .t_box{overflow:auto; border:#ccc dotted 1px; margin:3px;}
+.red{color:#f60}
+.red2{color:#c00}
+
+table.tsbox{border:#B7D2DF dotted 1px; background:#fff}
+table.tsbox a{color:#f60}
+table.tsbox td{padding:2px}
+
+.f12{font-size:12px}
+
+.cydz{overflow:hidden; margin-bottom:7px}
+
+.cydz li{width:124px; padding:5px; line-height:150%; display:block; float:left; margin-right:7px; background:#F8FBFC; border:#B7D2DF dotted 1px; color:#87B4C9; padding-left:2px; margin-bottom:5px; overflow:hidden;}
+.cydz li.xz{color:#F8AA27; background:#FFFAEE; border:#F9BA53 dotted 1px}
+.txta{  margin:0px; background:#fff;border:#7CADC5 solid 1px; border-bottom:#B7D2DF solid 1px; border-right:#B7D2DF solid 1px;float:left;margin-right:5px;padding:0 3px}
+.txtb{margin:0;padding:0}
+li.li1{padding-left:10px;width:28%;background:url(../images/complete.jpg) no-repeat 95px 50%}
+li.li3{padding-left:30px;width:28%}
+li.li2{ }
+li.li4{ width:160px;background:url(../images/complete.jpg) no-repeat 130px 50%}
+li.li5{width:140px;}
+
+.coupon_part{border:#eee 1px solid;padding:2px;margin:2px;}
+
+
+
+.grouptitle{color:#05539b;}
+
+.alertInfo{background:#FFECEC; border:#F34956 solid 1px; color:#C00;margin:0 0 5px 3px;padding:2px;}
+.waitInfo{color:#666;Background:#fff url(../images/loading.gif) no-repeat 3px 3px;border:#C0C0C0 1px solid; margin-left:10px;padding-top:4px;padding-bottom:3px;padding-left:20px;padding-right:10px;font-size:12px;font-weight:400;}
+.couponSelect{
+	background:#F9BA53;
+	}
+	
+.succeed_font1 {color: #ff9900;margin-right: 10px;}
