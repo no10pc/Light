@@ -1,0 +1,63 @@
+BODY{
+color:#000000;
+font-size:12px;                       
+line-height:150%;
+background-position:center;
+text-decoration: none;
+
+
+} 
+body.bodystyle { margin:1px; padding:0px; background-color: #173C73; color: #000000; font-weight: normal; font-size: 12px; font-style: normal; text-decoration: none; font-family: 宋体; border:0px; }
+
+Td,Div{ font-size:12px;}
+input,textarea,select{background:#ffffff; border:1px solid #cdcdcd; color:#000000;}
+
+/*站点链接基本样式*/
+a                { font-size: 9pt; color: #000000; text-decoration: none; }
+a:visited        { font-size: 9pt; color: #000000; text-decoration: none;}
+a:hover          { font-size: 9pt; color: #FF0000; text-decoration: none; }
+
+/*以下是标签类样式,每个标签均处于一个表格中,标签管理中设置的样式优先于此处样式*/
+
+/*栏目菜单*/
+.Board_Tab{color:#666666;}
+
+/*新闻文章_栏目*/
+.NewsInfoBoard_Tab{}
+
+/*新闻文章_列表*/
+.NewsInfoList_Tab{}
+
+/*新闻文章_内容*/
+.NewsInfoContent_Tab{}
+
+/*图文产品_栏目*/
+.ProsInfoBoard_Tab{}
+
+/*图文产品_列表*/
+.ProsInfoList_Tab{}
+
+/*图文产品_内容*/
+.ProsInfoContent_Tab{}
+
+/*文档下载_栏目*/
+.FileInfoBoard_Tab{}
+
+/*文档下载_列表*/
+.FileInfoList_Tab{}
+
+/*文档下载_内容*/
+.FileInfoContent_Tab{}
+
+/*访客留言_列表*/
+.GuestInfoList_Tab{width:100%} 
+
+/*在线表单*/
+.OnlineOrdTab { width:100%}
+.OnlineOrdTab td{ color:#666666; height:25px; border-bottom:1px solid #eeeeee;}
+.OnlineOrdTab input,textarea{ color:#666666}
+
+/*==设置网站页面宽度==*/
+.GolWidth{ width:951px;}
+
+
