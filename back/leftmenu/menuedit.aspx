@@ -76,7 +76,7 @@
                             <td>
                                 <input type="hidden" id="typeid" name="typeid" value="0" />
                                 <input type="submit" class="submit" name="btnSubmit" value="确认修改" id="btnSubmit"
-                                    onclick="return validate();" />
+                                   />
                             </td>
                         </tr>
                     </table>

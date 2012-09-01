@@ -13,7 +13,8 @@ public partial class product_showlist : PageBase
         {
             light.BLL.product bll = new light.BLL.product();
             bll.Delete(pid);
-            light.Common.WebMessageBox.ShowMessageBox("删除成功", this);
+            light.Common.WebMessageBox.ShowMessageBoxRedirect("删除成功","showlist.aspx", this);
+
         }
     }
 }

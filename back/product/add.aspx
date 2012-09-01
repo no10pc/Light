@@ -59,7 +59,7 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            产品中文名称：
+                            中文名称：
                         </td>
                         <td>
                             <input name="pname" type="text" id="pname" class="w300" />
@@ -67,7 +67,7 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            产品英文名称：
+                            英文名称：
                         </td>
                         <td>
                             <input name="enpname" type="text" id="enpname" class="w300" />
@@ -75,7 +75,7 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            产品韩文名称：
+                            韩文名称：
                         </td>
                         <td>
                             <input name="krpname" type="text" id="krpname" class="w300" />

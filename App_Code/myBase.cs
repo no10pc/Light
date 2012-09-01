@@ -205,16 +205,16 @@ public class myBase : PageBase
             myStringBuilder.Append("<td align='center' height='39'  background='/images/left.jpg'>");
             if (type == 1)
             {
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["cname"].ToString() + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["cname"].ToString() + "]</a>");
             }
             else if (type == 2)
             {
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
 
             }
             else
             {
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
 
             }
 
@@ -239,7 +239,7 @@ public class myBase : PageBase
             {
                 myStringBuilder.Append("<tr>");
                 myStringBuilder.Append("<td align='center' height='39'  background='/images/left.jpg'>");
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["cname"].ToString() + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["cname"].ToString() + "]</a>");
                 myStringBuilder.Append("</td>");
                 myStringBuilder.Append("</tr>");
             }
@@ -250,7 +250,7 @@ public class myBase : PageBase
             {
                 myStringBuilder.Append("<tr>");
                 myStringBuilder.Append("<td align='center' height='39'  background='/images/left.jpg'>");
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
                 myStringBuilder.Append("</td>");
                 myStringBuilder.Append("</tr>");
             }
@@ -261,7 +261,7 @@ public class myBase : PageBase
             {
                 myStringBuilder.Append("<tr>");
                 myStringBuilder.Append("<td align='center' height='39'  background='/images/left.jpg'>");
-                myStringBuilder.Append("<a href='index-" + dr["pkid"].ToString() + ".html' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
+                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
                 myStringBuilder.Append("</td>");
                 myStringBuilder.Append("</tr>");
             }
@@ -472,6 +472,9 @@ public class myBase : PageBase
         }
         return myStringBuilder.ToString();
     }
+
+  
+
     public PageModel initpage(int type)
     {
         PageModel model = new PageModel();
@@ -577,6 +580,150 @@ public class myBase : PageBase
         }
         myStringBuilder.Append("</table>");
         myStringBuilder.Append("</div>");
+        return myStringBuilder.ToString();
+    }
+    /// <summary>
+    /// 产品页中的产品列表
+    /// </summary>
+    /// <param name="pageVal"></param>
+    /// <returns></returns>
+    public string prodouctList(int type)
+    {
+
+        StringBuilder myStringBuilder = new StringBuilder();
+        DataTable dt = new light.BLL.product().GetList(" 1=1 ").Tables[0];
+        myStringBuilder.AppendLine(" <table width=\"100%\" class=\"Board_Tab\" border=\"0\" cellspacing=\"5\" cellpadding=\"0\">");
+        int td = 1;
+        int closespan = dt.Rows.Count % 4;
+        myStringBuilder.AppendLine("           <tr>");
+        foreach (DataRow dr in dt.Rows)
+        {
+
+
+            if (type == 1)
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["pname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+            else if (type == 2)
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["krpname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+            else
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["enpname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+
+            if ((td % 4) == 0)
+            {
+                myStringBuilder.AppendLine("           </tr>");
+
+                if (td != dt.Rows.Count)
+
+                    myStringBuilder.AppendLine("           <tr>");
+
+            }
+            td++;
+
+        }
+
+        myStringBuilder.AppendLine("</table>");
+        return myStringBuilder.ToString();
+    }
+
+    public string prodouctList(int type,int categoryid)
+    {
+
+        StringBuilder myStringBuilder = new StringBuilder();
+        DataTable dt = new light.BLL.product().GetList(" pcateid= "+categoryid.ToString()).Tables[0];
+        myStringBuilder.AppendLine(" <table width=\"100%\" class=\"Board_Tab\" border=\"0\" cellspacing=\"5\" cellpadding=\"0\">");
+        int td = 1;
+        int closespan = dt.Rows.Count % 4;
+        myStringBuilder.AppendLine("           <tr>");
+        foreach (DataRow dr in dt.Rows)
+        {
+
+
+            if (type == 1)
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["pname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+            else if (type == 2)
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["krpname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+            else
+            {
+                myStringBuilder.AppendLine("             <td align='center' bgcolor='' background='#' >");
+                myStringBuilder.AppendLine("                <div>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >");
+                myStringBuilder.AppendLine("                        <img src=\"" + dr["plogo"].ToString() + "\" width=\"100\" height=\"100\" border=\"0\">");
+                myStringBuilder.AppendLine("                    </a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("                <div style='line-height: 200%'>");
+                myStringBuilder.AppendLine("                    <a href=\"product.aspx?id=" + dr["pkid"].ToString() + "\" >" + dr["enpname"].ToString() + "</a>");
+                myStringBuilder.AppendLine("                </div>");
+                myStringBuilder.AppendLine("             </td>");
+            }
+
+            if ((td % 4) == 0)
+            {
+                myStringBuilder.AppendLine("           </tr>");
+
+                if (td != dt.Rows.Count)
+
+                    myStringBuilder.AppendLine("           <tr>");
+
+            }
+            td++;
+
+        }
+
+        myStringBuilder.AppendLine("</table>");
         return myStringBuilder.ToString();
     }
 }

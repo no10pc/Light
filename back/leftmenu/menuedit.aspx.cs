@@ -58,7 +58,7 @@ public partial class leftmenu_menuedit : PageBase
 
     private void doPost()
     {
-        int typeid = int.Parse(Request["typeid"].ToString());
+        int typeid = int.Parse(ViewState["pid"].ToString());
         if (typeid > 0)
         {
             light.BLL.leftmenu bll = new light.BLL.leftmenu();

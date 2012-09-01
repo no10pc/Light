@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="edit.aspx.cs" Inherits="product_edit"
-    ValidateRequest="false" %>
+    ValidateRequest="false" EnableEventValidation="false" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,7 +60,7 @@
                     </tr>
                      <tr>
                         <td align="center">
-                            产品中文名称：
+                            中文名称：
                         </td>
                         <td>
                             <input name="pname" type="text" id="pname" class="w300"  value="<%=model.pname %>" />
@@ -68,7 +68,7 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            产品英文名称：
+                            英文名称：
                         </td>
                         <td>
                             <input name="enpname" type="text" id="enpname" class="w300"  value="<%=model.enpname %>" />
@@ -76,7 +76,7 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            产品韩文名称：
+                            韩文名称：
                         </td>
                         <td>
                             <input name="krpname" type="text" id="krpname" class="w300" value="<%=model.krpname %>" />

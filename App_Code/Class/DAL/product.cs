@@ -120,7 +120,7 @@ namespace light.DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("update product set isopen=0 ");
+            strSql.Append(" delete * from product ");
             strSql.Append(" where pkid=@pkid ");
             OleDbParameter[] parameters = {
 					new OleDbParameter("@pkid", OleDbType.Integer,4)};
