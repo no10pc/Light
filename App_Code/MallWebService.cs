@@ -172,7 +172,7 @@ public class MallWebService : System.Web.Services.WebService
         myStringBuilder.AppendFormat(@"<div class=""Header"">");
         myStringBuilder.AppendFormat(@"    <div id=""Logo"">");
         myStringBuilder.AppendFormat(@"        <a href=""/"">");
-        myStringBuilder.AppendFormat(@"            <img src=""/images/wz_logo.gif"" width=""167"" height=""46"" /></a></div>");
+        myStringBuilder.AppendFormat(@"            <img src=""/images/20073123552820.gif"" width=""167"" height=""46"" /></a></div>");
         myStringBuilder.AppendFormat(@"");
         myStringBuilder.AppendFormat(@"    <div class=""head_box1"">");
         myStringBuilder.AppendFormat(@"        <div id=""Tip"">" + login + "</div>");
