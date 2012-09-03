@@ -90,8 +90,8 @@ namespace light.BLL
 					{
 						model.pkid=int.Parse(dt.Rows[n]["pkid"].ToString());
 					}
-					model.cname=dt.Rows[n]["cname"].ToString();
-					model.ename=dt.Rows[n]["ename"].ToString();
+					model.cnname=dt.Rows[n]["cname"].ToString();
+					model.enname=dt.Rows[n]["ename"].ToString();
 					if(dt.Rows[n]["parentid"].ToString()!="")
 					{
 						model.parentid=int.Parse(dt.Rows[n]["parentid"].ToString());
@@ -104,6 +104,10 @@ namespace light.BLL
 					{
 						model.addtime=DateTime.Parse(dt.Rows[n]["addtime"].ToString());
 					}
+                    model.c_description = dt.Rows[n]["c_description"].ToString();
+                    model.k_description = dt.Rows[n]["k_description"].ToString();
+                    model.e_description = dt.Rows[n]["e_description"].ToString();
+
 					modelList.Add(model);
 				}
 			}

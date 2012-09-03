@@ -4,8 +4,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
+using System.Linq;
 
-public partial class _index : myBase
+public partial class _CompanyInfo : myBase
 {
     protected int pageVal = 1;
     protected int navid = 1;
@@ -14,6 +15,22 @@ public partial class _index : myBase
     protected string description = string.Empty;
     protected string description_title = string.Empty;
     protected void Page_Load(object sender, EventArgs e)
+    {
+
+        if (!Page.IsPostBack)
+        {
+            int id = light.Common.DNTRequest.GetQueryInt("id", 0);
+            if (id > 0)
+            {
+                showinfo(id);
+            }
+        }
+
+
+
+    }
+
+    private void showinfo(int id)
     {
         switch (UserState.lng)
         {
@@ -26,58 +43,36 @@ public partial class _index : myBase
             case "en":
                 pageVal = 3;
                 break;
-      
-        }
-        pageModel = new myBase().initpage(pageVal);
-
-        navid = light.Common.DNTRequest.GetQueryInt("id", 0);
-        if (navid > 0)
-        {
-            leftString = getLeftString(navid);
-        }
-        else
-        {
-            Response.Redirect("default.aspx");
+         
         }
 
 
+        light.Model.leftmenu model = new light.BLL.leftmenu().GetModel(id);
 
-
-
-
-    }
-
-    private string getLeftString(int navid)
-    {
         StringBuilder sb = new StringBuilder();
 
         string title = string.Empty;
         string list = string.Empty;
-        if (navid == 1)
+
+        if (pageVal == 1)
         {
-            title = pageModel._企业介绍;
-            list = base.leftnav(pageVal);
-            description = base.getCompanyInfi(pageVal);
+            title = model.cnname;
+            description = model.c_description;
         }
-        else if (navid == 2)
+        else if (pageVal == 2)
         {
-            title = pageModel._新闻分类;
-            list = base.newsCategory(pageVal);
-            description = base.newsAllList(pageVal);
-        }
-        else if (navid == 3)
-        {
-            title = pageModel._产品分类;
-            list = base.procategoryList(pageVal);
-            description = base.prodouctList(pageVal);
+            title = model.enname.Split('|')[1];
+            description = model.k_description;
         }
         else
         {
-            title = pageModel._企业介绍;
-            list = base.leftnav(pageVal);
-            description = base.leftInfo(pageVal);
+            title = model.enname.Split('|')[0];
+            description = model.e_description;
         }
        
+        list = base.leftnav(pageVal);
+      
+
 
         sb.AppendLine(@" <table style=""z-index: 100"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%"">");
         sb.AppendLine(@"                            <tbody>");
@@ -97,8 +92,6 @@ public partial class _index : myBase
         sb.AppendLine(@"                            </tbody>");
         sb.AppendLine(@"                        </table>");
 
-
-
-        return sb.ToString();
+        leftString = sb.ToString();
     }
 }

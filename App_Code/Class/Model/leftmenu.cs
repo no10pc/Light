@@ -9,63 +9,15 @@ namespace light.Model
 	{
 		public leftmenu()
 		{}
-		#region Model
-		private int _pkid;
-		private string _cname;
-		private string _ename;
-		private int _parentid;
-		private int _isopen;
-		private DateTime _addtime;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int pkid
-		{
-			set{ _pkid=value;}
-			get{return _pkid;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string cname
-		{
-			set{ _cname=value;}
-			get{return _cname;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string ename
-		{
-			set{ _ename=value;}
-			get{return _ename;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public int parentid
-		{
-			set{ _parentid=value;}
-			get{return _parentid;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public int isopen
-		{
-			set{ _isopen=value;}
-			get{return _isopen;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime addtime
-		{
-			set{ _addtime=value;}
-			get{return _addtime;}
-		}
-		#endregion Model
-
+        public int pkid { get; set; }
+        public string cnname { get; set; }
+        public string enname { get; set; }
+        public string krname { get; set; }
+        public int parentid { get; set; }
+        public int isopen { get; set; }
+        public DateTime addtime { get; set; }
+        public string c_description { get; set; }
+        public string k_description { get; set; }
+        public string e_description { get; set; }
 	}
 }
-

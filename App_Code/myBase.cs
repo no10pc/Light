@@ -5,6 +5,7 @@ using System.Web.UI;
 using light.Common;
 using System.Text;
 using System.Data;
+using System.Linq;
 
 /// <summary>
 ///PageBase 的摘要说明
@@ -12,6 +13,7 @@ using System.Data;
 public class myBase : PageBase
 {
     public light.Model.backtools model = new light.BLL.backtools().GetModel("admin");
+
     protected override void OnInit(EventArgs e)
     {
         //base.OnInit(e);
@@ -79,20 +81,17 @@ public class myBase : PageBase
                 myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=4"" target=""_self"" ");
                 myStringBuilder.Append(@"class=""h"">资质荣誉</a>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
+                //myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
+                //myStringBuilder.Append(@"class=""h"">成功案例</a>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+
                 myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
                 myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">成功案例</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=6"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">访客留言</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=7"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">联系我们</a>" + Environment.NewLine);
+
+                myStringBuilder.Append(@"<a target=""_self"" class=""h"" href=""http://wpa.qq.com/msgrd?v=3&uin=578528433&site=qq&menu=yes"">联系我们</a>");
+
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                            </tr>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                        </table>");
@@ -125,20 +124,15 @@ public class myBase : PageBase
                 myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=4"" target=""_self"" ");
                 myStringBuilder.Append(@"class=""h"">영예로운</a>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
+                //myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
+                //myStringBuilder.Append(@"class=""h"">성공 사례</a>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+
                 myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
                 myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">성공 사례</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=6"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">방명록</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=7"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">고객 문의</a>" + Environment.NewLine);
+                myStringBuilder.Append(@"<a target=""_self"" class=""h"" href=""http://wpa.qq.com/msgrd?v=3&uin=578528433&site=qq&menu=yes"">고객 문의</a>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                            </tr>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                        </table>");
@@ -171,20 +165,15 @@ public class myBase : PageBase
                 myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=4"" target=""_self"" ");
                 myStringBuilder.Append(@"class=""h"">Honors</a>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
+                //myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
+                //myStringBuilder.Append(@"class=""h"">Success Stories</a>" + Environment.NewLine);
+                //myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
+                ;
                 myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
                 myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=5"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">Success Stories</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=6"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">Guestbook</a>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                <td align=""center"" height=""32"" bgcolor="""" ");
-                myStringBuilder.Append(@"background="" "">" + Environment.NewLine);
-                myStringBuilder.Append(@"                                                    <a href=""index.aspx?id=7"" target=""_self"" ");
-                myStringBuilder.Append(@"class=""h"">Contact Us</a>" + Environment.NewLine);
+                myStringBuilder.Append(@" <a target=""_self"" class=""h"" href=""http://wpa.qq.com/msgrd?v=3&uin=578528433&site=qq&menu=yes"">Contact Us</a>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                                </td>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                            </tr>" + Environment.NewLine);
                 myStringBuilder.Append(@"                                        </table>");
@@ -198,23 +187,23 @@ public class myBase : PageBase
         StringBuilder myStringBuilder = new StringBuilder();
         myStringBuilder.Append("<div class='syCss_2010461021968'>");
         myStringBuilder.Append("<table class='Board_Tab' width='100%' border='0' cellspacing='0' cellpadding='0'>");
-        DataTable dt = new light.BLL.leftmenu().GetList(" parentid=0 ").Tables[0];
+        //DataTable dt = new light.BLL.leftmenu().GetList(" parentid=0 ").Tables[0];
+        DataTable dt = new light.BLL.leftmenu().GetList(" 1=1 ").Tables[0];
         foreach (DataRow dr in dt.Rows)
         {
             myStringBuilder.Append("<tr>");
             myStringBuilder.Append("<td align='center' height='39'  background='/images/left.jpg'>");
             if (type == 1)
             {
-                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["cname"].ToString() + "]</a>");
+                myStringBuilder.Append("<a href='CompanyInfo.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["cname"].ToString() + "]</a>");
             }
             else if (type == 2)
             {
-                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
-
+                myStringBuilder.Append("<a href='CompanyInfo.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[1] + "]</a>");
             }
             else
             {
-                myStringBuilder.Append("<a href='productlist.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
+                myStringBuilder.Append("<a href='CompanyInfo.aspx?id=" + dr["pkid"].ToString() + "' target='_self'>[" + dr["ename"].ToString().Split('|')[0] + "]</a>");
 
             }
 
@@ -410,7 +399,7 @@ public class myBase : PageBase
             myStringBuilder.Append("<tr>");
             myStringBuilder.Append("<td height=\"22\">");
             myStringBuilder.Append("<img src=\"/images/li.jpg\" width=\"12\" height=\"12\" hspace=\"6\" border=\"0\">");
-            myStringBuilder.Append(" <a href=\"news.aspx?id=" + dr["id"].ToString() + "\" >" + Utility.CutString(dr["title"].ToString(), 0, 25) + "</a>");
+            myStringBuilder.Append(" <a href=\"news.aspx?id=" + dr["id"].ToString() + "\" >" + Utility.CutString(dr["title"].ToString(), 0, 22) + "</a>");
             myStringBuilder.Append("</td>");
             myStringBuilder.Append("<td>");
             myStringBuilder.Append("</td>");
@@ -473,7 +462,7 @@ public class myBase : PageBase
         return myStringBuilder.ToString();
     }
 
-  
+
 
     public PageModel initpage(int type)
     {
@@ -657,11 +646,11 @@ public class myBase : PageBase
         return myStringBuilder.ToString();
     }
 
-    public string prodouctList(int type,int categoryid)
+    public string prodouctList(int type, int categoryid)
     {
 
         StringBuilder myStringBuilder = new StringBuilder();
-        DataTable dt = new light.BLL.product().GetList(" pcateid= "+categoryid.ToString()).Tables[0];
+        DataTable dt = new light.BLL.product().GetList(" pcateid= " + categoryid.ToString()).Tables[0];
         myStringBuilder.AppendLine(" <table width=\"100%\" class=\"Board_Tab\" border=\"0\" cellspacing=\"5\" cellpadding=\"0\">");
         int td = 1;
         int closespan = dt.Rows.Count % 4;
@@ -724,6 +713,64 @@ public class myBase : PageBase
         }
 
         myStringBuilder.AppendLine("</table>");
+        return myStringBuilder.ToString();
+    }
+
+    public string leftInfo(int pageVal)
+    {
+        return "info";
+    }
+
+    public string newsAllList(int pageVal)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        string strwhere = " categoryid=1 or categoryid=2 ";
+        if (pageVal == 2)
+        {
+            strwhere = " categoryid=3 or categoryid=4 ";
+        }
+        else if (pageVal == 3)
+        {
+            strwhere = " categoryid=5 or categoryid=6 ";
+        }
+
+        DataTable dt = new light.BLL.news().GetList(strwhere).Tables[0];
+
+        sb.AppendLine(@"<table width=""100%"" class=""Board_Tab"" border=""0"" cellspacing=""0"" cellpadding=""0"">");
+        foreach (DataRow dr in dt.Rows)
+        {
+            sb.AppendLine(@"<tr>");
+            sb.AppendLine(@"  <td height=""25"" BgColor="""" background=""#""><img src=""queryli.gif"" width=""7"" height=""7"" hspace=""6"">");
+            sb.AppendLine(@"     <a href='news.aspx?id=" + dr["id"].ToString() + "' target='_blank'>" + dr["title"].ToString() + "</a></td>");
+            sb.AppendLine(@"  <td BgColor="""" background=""#"">" + Convert.ToDateTime(dr["addtime"]).ToShortDateString() + "</td>");
+            sb.AppendLine(@"</tr>");
+        }
+        sb.AppendLine(@"</table>");
+
+        return sb.ToString();
+    }
+
+    public string newsCategoryById(int id)
+    {
+        StringBuilder myStringBuilder = new StringBuilder();
+        
+        myStringBuilder.AppendLine("<table width='100%' class='Board_Tab' border='0' cellspacing='0' cellpadding='0'>");
+
+
+
+        DataTable dt = new light.BLL.news().GetList(" categoryid= " + id).Tables[0];
+        foreach (DataRow dr in dt.Rows)
+        {
+            myStringBuilder.AppendLine("<tr>");
+            myStringBuilder.AppendLine(@"<td height=""25"" BgColor="""" background=""#""><img src=""queryli.gif"" width=""7"" height=""7"" hspace=""6"">");
+            myStringBuilder.AppendLine(@"<a href='news.aspx?id="+dr["id"].ToString()+"' target='_self'>"+dr["title"].ToString()+"</a></td>");
+            myStringBuilder.AppendLine(@"<td BgColor="""" background=""#"">"+dr["addtime"].ToString()+"</td>");
+
+            myStringBuilder.AppendLine("</tr>");
+        }
+        myStringBuilder.AppendLine("</table>");
+       
         return myStringBuilder.ToString();
     }
 }

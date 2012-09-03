@@ -33,7 +33,7 @@ public class getmenudesc : IHttpHandler
             model = bll.GetModel(int.Parse(id));
             if (model != null)
             {
-                strMsg = model.ename;
+                strMsg = model.enname;
             }
         }
         catch

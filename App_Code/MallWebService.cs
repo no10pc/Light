@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Maticsoft.DBUtility;
 using System.Collections;
+using System.Linq;
 
 
 /// <summary>
@@ -48,7 +49,8 @@ public class MallWebService : System.Web.Services.WebService
         sb.Append("</ul>");
         sb.Append("<h3>栏目管理</h3>");
         sb.Append("<ul class=\"margin_b6\">");
-        DataTable dt = new light.BLL.leftmenu().GetList(" parentid=0 ").Tables[0];
+
+        DataTable dt = new light.BLL.leftmenu().GetList(" 1=1 ").Tables[0];
         foreach (DataRow dr in dt.Rows)
         {
             sb.Append("<li><a href=\"/back/leftmenu/menuedit.aspx?pid=" + dr["pkid"].ToString() + "\">【" + dr["cname"].ToString() + "】</a></li>");

@@ -29,8 +29,8 @@ public partial class leftmenu_add : PageBase
         light.BLL.leftmenu bll = new light.BLL.leftmenu();
         light.Model.leftmenu model = new light.Model.leftmenu();
         model.addtime = DateTime.Now;
-        model.cname = cname;
-        model.ename = light.Common.Hz2Py.Convert(cname);
+        model.cnname = cname;
+        model.enname = light.Common.Hz2Py.Convert(cname);
         model.isopen = 1;
         model.parentid = int.Parse(ViewState["pid"].ToString());
         bll.Add(model);

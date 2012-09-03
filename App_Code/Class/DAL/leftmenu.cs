@@ -55,12 +55,18 @@ namespace light.DAL
 					new OleDbParameter("@ename", OleDbType.VarChar,0),
 					new OleDbParameter("@parentid", OleDbType.Integer,4),
 					new OleDbParameter("@isopen", OleDbType.Integer,4),
-					new OleDbParameter("@addtime", OleDbType.Date)};
-			parameters[0].Value = model.cname;
-			parameters[1].Value = model.ename;
+					new OleDbParameter("@addtime", OleDbType.Date),
+                    new OleDbParameter("@c_description", OleDbType.VarChar,0),
+                    new OleDbParameter("@k_description", OleDbType.VarChar,0),
+                    new OleDbParameter("@e_description", OleDbType.VarChar,0)};
+			parameters[0].Value = model.cnname;
+			parameters[1].Value = model.enname;
 			parameters[2].Value = model.parentid;
 			parameters[3].Value = model.isopen;
 			parameters[4].Value = model.addtime;
+            parameters[5].Value = model.c_description;
+            parameters[6].Value = model.k_description;
+            parameters[7].Value = model.e_description;
 
 			DbHelperOleDb.ExecuteSql(strSql.ToString(),parameters);
 		}
@@ -75,7 +81,10 @@ namespace light.DAL
 			strSql.Append("ename=@ename,");
 			strSql.Append("parentid=@parentid,");
 			strSql.Append("isopen=@isopen,");
-			strSql.Append("addtime=@addtime");
+			strSql.Append("addtime=@addtime,");
+            strSql.Append("c_description=@c_description,");
+            strSql.Append("k_description=@k_description,");
+            strSql.Append("e_description=@e_description");
 			strSql.Append(" where pkid=@pkid ");
 			OleDbParameter[] parameters = {
 					new OleDbParameter("@cname", OleDbType.VarChar,255),
@@ -83,14 +92,21 @@ namespace light.DAL
 					new OleDbParameter("@parentid", OleDbType.Integer,4),
 					new OleDbParameter("@isopen", OleDbType.Integer,4),
 					new OleDbParameter("@addtime", OleDbType.Date),
+                    new OleDbParameter("@c_description", OleDbType.VarChar,0),
+                    new OleDbParameter("@k_description", OleDbType.VarChar,0),
+                    new OleDbParameter("@e_description", OleDbType.VarChar,0),
                     new OleDbParameter("@pkid", OleDbType.Integer,4)};
-			parameters[0].Value = model.cname;
-			parameters[1].Value = model.ename;
+			parameters[0].Value = model.cnname;
+			parameters[1].Value = model.enname;
 			parameters[2].Value = model.parentid;
 			parameters[3].Value = model.isopen;
 			parameters[4].Value = model.addtime;
-            parameters[5].Value = model.pkid;
-			DbHelperOleDb.ExecuteSql(strSql.ToString(),parameters);
+            parameters[5].Value = model.c_description;
+            parameters[6].Value = model.k_description;
+            parameters[7].Value = model.e_description;
+            parameters[8].Value = model.pkid;
+			DbHelperOleDb.ExecuteSql(strSql.ToString(),parameters);  
+            
 		}
 
 		/// <summary>
@@ -117,7 +133,7 @@ namespace light.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select pkid,cname,ename,parentid,isopen,addtime from leftmenu ");
+			strSql.Append("select * from leftmenu ");
 			strSql.Append(" where pkid=@pkid ");
 			OleDbParameter[] parameters = {
 					new OleDbParameter("@pkid", OleDbType.Integer,4)};
@@ -131,8 +147,8 @@ namespace light.DAL
 				{
 					model.pkid=int.Parse(ds.Tables[0].Rows[0]["pkid"].ToString());
 				}
-				model.cname=ds.Tables[0].Rows[0]["cname"].ToString();
-				model.ename=ds.Tables[0].Rows[0]["ename"].ToString();
+				model.cnname=ds.Tables[0].Rows[0]["cname"].ToString();
+				model.enname=ds.Tables[0].Rows[0]["ename"].ToString();
 				if(ds.Tables[0].Rows[0]["parentid"].ToString()!="")
 				{
 					model.parentid=int.Parse(ds.Tables[0].Rows[0]["parentid"].ToString());
@@ -145,6 +161,11 @@ namespace light.DAL
 				{
 					model.addtime=DateTime.Parse(ds.Tables[0].Rows[0]["addtime"].ToString());
 				}
+                model.c_description = ds.Tables[0].Rows[0]["c_description"].ToString();
+                model.k_description = ds.Tables[0].Rows[0]["k_description"].ToString();
+                model.e_description = ds.Tables[0].Rows[0]["e_description"].ToString();
+
+
 				return model;
 			}
 			else

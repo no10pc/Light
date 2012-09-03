@@ -18,7 +18,7 @@
                 </td>
                 <td style="text-align: left">
                 
-                    <input id="cname" name="cname" type="text" class="w200" value="<% = model.cname %>" />
+                    <input id="cname" name="cname" type="text" class="w200" value="<% = model.cnname %>" />
                 </td>
             </tr>
             <tr align="left">

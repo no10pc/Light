@@ -201,7 +201,7 @@ namespace light.Common
                     }
                 }
             }
-            catch (Exception Exp)
+            catch 
             {
                 pyString = ""; 
             }

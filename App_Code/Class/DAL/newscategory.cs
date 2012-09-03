@@ -153,7 +153,7 @@ namespace light.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select pkid,cname,ename,parentid,isopen,addtime ");
+			strSql.Append("select * ");
 			strSql.Append(" FROM newscategory ");
 			if(strWhere.Trim()!="")
 			{

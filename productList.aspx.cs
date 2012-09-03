@@ -42,9 +42,6 @@ public partial class _product : myBase
             case "en":
                 pageVal = 3;
                 break;
-            default:
-                pageVal = 1;
-                break;
         }
 
 

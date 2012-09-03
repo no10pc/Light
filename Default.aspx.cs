@@ -26,9 +26,7 @@ public partial class _Default : myBase
                 case "en":
                     pageVal = 3;
                     break;
-                default:
-                    pageVal = 1;
-                    break;
+                
             }
 
             pageModel = new myBase().initpage(pageVal);

@@ -32,7 +32,7 @@ public partial class leftmenu_edit : PageBase
         if (!bll.Exists(cname))
         {
             model = bll.GetModel(int.Parse(ViewState["pid"].ToString()));
-            model.cname = cname;
+            model.cnname = cname;
             bll.Update(model);
             WebMessageBox.ShowMessageBox("修改成功", this);
         }
