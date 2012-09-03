@@ -341,8 +341,8 @@ public class myBase : PageBase
             case 2:
                 {
                     myStringBuilder.Append("주소：" + model.kaddress + "&nbsp;");
-                    myStringBuilder.Append("우편 번호：" + model.postcode + "<br>");
-                    myStringBuilder.Append("전화：" + model.phone + "&nbsp;");
+                    myStringBuilder.Append("주소：" + model.postcode + "<br>");
+                    myStringBuilder.Append("우편번호：" + model.phone + "&nbsp;");
                     myStringBuilder.Append("팩스：" + model.mobile + "&nbsp;");
                     myStringBuilder.Append("웹사이트：" + model.url + "&nbsp;");
                     myStringBuilder.Append("Email：" + model.email);
